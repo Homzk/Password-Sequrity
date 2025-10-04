@@ -34,8 +34,8 @@ Una aplicación web moderna que evalúa la fortaleza de contraseñas utilizando 
 
 1. **Clonar el repositorio**
    ```bash
-   git clone https://github.com/tu-usuario/evaluador-fortaleza-contrasenas.git
-   cd evaluador-fortaleza-contrasenas
+   git clone https://github.com/Homzk/Password-Sequrity.git
+   cd Password-Sequrity
    ```
 
 
