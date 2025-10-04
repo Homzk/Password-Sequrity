@@ -1,73 +1,112 @@
-# React + TypeScript + Vite
+# Evaluador de Fortaleza de Contraseñas 🔒
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una aplicación web moderna que evalúa la fortaleza de contraseñas utilizando algoritmos de Machine Learning. Desarrollada con React, TypeScript y Python.
 
-Currently, two official plugins are available:
+## 🚀 Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Evaluación en tiempo real de la fortaleza de contraseñas
+- Análisis de seguridad potenciado por Machine Learning
+- Interfaz de usuario moderna y responsiva con Tailwind CSS
+- Desarrollo con seguridad de tipos usando TypeScript
+- API segura en el backend con Python
 
-## React Compiler
+## 🛠️ Tecnologías Utilizadas
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+### Frontend
+- React 18
+- TypeScript
+- Tailwind CSS
+- Vite (Herramienta de Construcción)
 
-## Expanding the ESLint configuration
+### Backend
+- Python (FastAPI/Flask - Por definir)
+- Machine Learning (scikit-learn/TensorFlow - Por definir)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Comenzando
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Requisitos Previos
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Node.js (v16+)
+- Python (3.8+)
+- npm o yarn
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Instalación
+
+1. **Clonar el repositorio**
+   ```bash
+   git clone https://github.com/tu-usuario/evaluador-fortaleza-contrasenas.git
+   cd evaluador-fortaleza-contrasenas
+   ```
+
+2. **Instalar dependencias del frontend**
+   ```bash
+   cd frontend
+   npm install
+   # o
+   yarn install
+   ```
+
+3. **Configurar el backend**
+   ```bash
+   cd ../backend
+   python -m venv venv
+   source venv/bin/activate  # En Windows: .\venv\Scripts\activate
+   pip install -r requirements.txt
+   ```
+
+### Ejecutando la Aplicación
+
+1. **Iniciar el frontend**
+   ```bash
+   cd frontend
+   npm run dev
+   ```
+
+2. **Iniciar el backend**
+   ```bash
+   cd backend
+   python app.py
+   ```
+
+La aplicación estará disponible en `http://localhost:3000`
+
+## 📂 Estructura del Proyecto
+
+```
+evaluador-fortaleza-contrasenas/
+├── frontend/               # Aplicación React frontend
+│   ├── src/
+│   │   ├── components/     # Componentes UI reutilizables
+│   │   ├── pages/          # Páginas de la aplicación
+│   │   ├── services/       # Servicios de API
+│   │   └── App.tsx         # Componente principal
+│   └── package.json
+│
+├── backend/                # Backend en Python
+│   ├── app/                # Código de la aplicación
+│   │   ├── models/         # Modelos de ML
+│   │   ├── routes/         # Rutas de la API
+│   │   └── services/       # Lógica de negocio
+│   ├── requirements.txt    # Dependencias de Python
+│   └── app.py             # Punto de entrada
+│
+└── README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🤝 Cómo Contribuir
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Haz un fork del repositorio
+2. Crea tu rama de características (`git checkout -b feature/NuevaCaracteristica`)
+3. Haz commit de tus cambios (`git commit -m 'Añadir NuevaCaracteristica'`)
+4. Haz push a la rama (`git push origin feature/NuevaCaracteristica`)
+5. Abre un Pull Request
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
+
+## 🙏 Reconocimientos
+
+- [Vite](https://vitejs.dev/) - Herramienta Frontend de Próxima Generación
+- [Tailwind CSS](https://tailwindcss.com/) - Un framework CSS utility-first
+- [FastAPI](https://fastapi.tiangolo.com/) - Framework web moderno y rápido para construir APIs
